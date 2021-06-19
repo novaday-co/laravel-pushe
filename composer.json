@@ -41,7 +41,7 @@
         },
         "laravel": {
             "providers": [
-                "farazin-co\\laravel-pushe\\PusheServiceProvider"
+                "FarazinCo\\LaravelPushe\\PusheServiceProvider"
             ]
         }
     }
