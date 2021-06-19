@@ -25,6 +25,7 @@
         }
     },
     "autoload-dev": {
+        "FarazinCo\\LaravelPushe\\": "src",
         "classmap": [
             "tests"
         ]
@@ -32,5 +33,12 @@
     "minimum-stability": "dev",
     "scripts": {
         "test": "@php vendor/bin/phpunit --colors=always"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FarazinCo\\LaravelPushe\\PusheServiceProvider"
+            ]
+        }
     }
 }

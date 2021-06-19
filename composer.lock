@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e8babb785bbf2746d44729227d9f69a6",
+    "content-hash": "209234c775ee1c98e06bec786a37dd0a",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -3905,6 +3905,7 @@
             ],
             "description": "Provides a list of PHP built-in functions that operate on resources",
             "homepage": "https://www.github.com/sebastianbergmann/resource-operations",
+            "abandoned": true,
             "time": "2020-09-28T06:45:17+00:00"
         },
         {
