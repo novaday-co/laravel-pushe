@@ -11,9 +11,9 @@ class Pushe{
     public $filters = [] , $topics = [] , $data, $token = null, $app_ids = '';
 
     public function __construct(){
-        $this->token = Config::get('pushe.token',null);
-        $this->app_ids = Config::get('pushe.app_ids',null);
-        $this->timeout  = Config::get('pushe.timeout',5);
+        $this->token = config('pushe.token',null);
+        $this->app_ids = config('pushe.app_ids',null);
+        $this->timeout  = config('pushe.timeout',5);
     }
 
     public function setToken($token){
