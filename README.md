@@ -40,7 +40,7 @@ composer require farazin-co/laravel-pushe
 
 
 ```composer
-php artisan vendor:publish --provider="farazin-co\laravel-pushe\PusheServiceProvider"
+php artisan vendor:publish --provider="FarazinCo\LaravelPushe\PusheServiceProvider"
 ```
 
 <p dir="rtl">
