@@ -17,6 +17,7 @@
         "guzzlehttp/guzzle": "^7.4@dev"
     },
     "require-dev": {
+        "orchestra/testbench": "^6.13",
         "phpunit/phpunit": "^9"
     },
     "autoload": {

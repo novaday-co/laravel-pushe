@@ -3,10 +3,17 @@
 namespace Tests;
 
 use FarazinCo\LaravelPushe\Pushe;
-use PHPUnit\Framework\TestCase;
-
-class PusheTest extends TestCase
+use FarazinCo\LaravelPushe\PusheServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
+class PusheTest extends Orchestra
 {
+    protected function getPackageProviders($app)
+    {
+        return [
+            PusheServiceProvider::class,
+        ];
+    }
+
     public function testBody()
     {
         $pushe = new Pushe;

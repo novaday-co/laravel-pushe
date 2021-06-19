@@ -4,16 +4,16 @@ namespace FarazinCo\LaravelPushe;
 
 use BadMethodCallException;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Config;
 
 class Pushe{
 
-    public $filters = [] , $topics = [] , $data, $token, $retry_wait_milliseconds = 100 , $retry_attempt = 3 , $app_ids = '';
+    public $filters = [] , $topics = [] , $data, $token = null, $app_ids = '';
 
     public function __construct(){
-        // $this->token = Config::get('Pushe.token');
-        // $this->app_ids = Config::get('Pushe.app_ids');
-        // $this->retry_attempt  = Config::get('Pushe.retry_attempt');
-        // $this->retry_wait_milliseconds  = Config::get('Pushe.retry_wait_milliseconds');
+        $this->token = Config::get('Pushe.token',null);
+        $this->app_ids = Config::get('Pushe.app_ids',null);
+        $this->timeout  = Config::get('Pushe.timeout',5);
     }
 
     public function setToken($token){
@@ -26,16 +26,6 @@ class Pushe{
         return $this;
     }
 
-    public function setRetryAttempt($retry_attempt){
-        $this->retry_attempt = $retry_attempt;
-        return $this;
-    }
-
-    public function setRetryWaitMiliseconds($retry_wait_milliseconds){
-        $this->retry_wait_milliseconds = $retry_wait_milliseconds;
-        return $this;
-    }
-
     public function setData($data){
         $this->data = $data;
         return $this;
@@ -43,6 +33,11 @@ class Pushe{
 
     public function setFilters($filters){
         $this->filters = $filters;
+        return $this;
+    }
+
+     public function setTags($tags){
+        $this->filters['tags'] = $tags;
         return $this;
     }
 
@@ -70,7 +65,7 @@ class Pushe{
             "Authorization" => "Token " . $this->token,
         ];
 
-        $client = new Client([ 'timeout' => 5.0 , 'headers' => $headers , 'body' => json_encode($body) ]);
+        $client = new Client([ 'timeout' => $this->timeout , 'headers' => $headers , 'body' => json_encode($body) ]);
         $response = $client->request('POST', 'https://api.pushe.co/v2/messaging/notifications/');
 
         return $response;
