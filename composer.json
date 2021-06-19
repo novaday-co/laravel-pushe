@@ -1,0 +1,36 @@
+{
+    "name": "farazin-co/laravel-pushe",
+    "description": "Send Pushe notification in Laravel",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/farazin-co/laravel-pushe",
+    "authors": [
+        {
+            "name": "Farid",
+            "email": "froozan@yahoo.com",
+            "homepage": "https://faridfr.ir"
+        }
+    ],
+    "require": {
+        "illuminate/http": "~5.0|~6.0|~7.0|~8.0",
+        "illuminate/support": "^8.0|^7.0|^6.0|^5.5",
+        "guzzlehttp/guzzle": "^7.4@dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    },
+    "autoload": {
+        "psr-4": {
+            "FarazinCo\\LaravelPushe\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests"
+        ]
+    },
+    "minimum-stability": "dev",
+    "scripts": {
+        "test": "@php vendor/bin/phpunit --colors=always"
+    }
+}
