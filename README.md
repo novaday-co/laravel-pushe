@@ -48,15 +48,15 @@ php artisan vendor:publish --provider="FarazinCo\LaravelPushe\PusheServiceProvid
 </p>
 
 
-```
-setToken توکن جدیدی را روی توکن کانفیگ بیندازید
-setAppIds آی دی اپ جدیدی را روی توکن کانفیگ بندازید
-setData ست کردن دیتا
-setFilters ست کردن فیلتر - دسته بندی
-setTags ست کردن مستقیم تگ
-setTopics ست کردن تاپیک
-send ارسال نوتیفیکیشن
 
-```
-  
+| Method       	| Description                         	|
+|------------	|-------------------------------------	|
+| setToken	| توکن جدیدی را روی توکن کانفیگ بیندازید | 
+| setAppIds	| آی دی اپ جدیدی را روی توکن کانفیگ بندازید | 
+| setData	| ست کردن دیتا | 
+| setFilters	| ست کردن فیلتر - دسته بندی | 
+| setTags	| ست کردن مستقیم تگ | 
+| setTopics	| ست کردن تاپیک |
+| send	| ارسال نوتیفیکیشن |
+ 
   
