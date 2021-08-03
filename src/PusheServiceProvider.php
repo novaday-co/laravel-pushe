@@ -9,14 +9,14 @@ class PusheServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/Pushe.php', 'Pushe'
+            __DIR__.'/../config/pushe.php', 'pushe'
         );
     }
 
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../config/Pushe.php' => config_path('Pushe.php'),
+            __DIR__.'/../config/pushe.php' => config_path('pushe.php'),
         ]);
     }
 }
