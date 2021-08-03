@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use FarazinCo\LaravelPushe\Pushe;
+use NovadayCo\LaravelPushe\Pushe;
 use PHPUnit\Framework\TestCase;
 
 class PusheTest extends TestCase

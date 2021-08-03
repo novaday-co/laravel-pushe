@@ -1,9 +1,9 @@
 {
-    "name": "farazin-co/laravel-pushe",
+    "name": "novaday-co/laravel-pushe",
     "description": "Send Pushe notification in Laravel",
     "type": "library",
     "license": "MIT",
-    "homepage": "https://github.com/farazin-co/laravel-pushe",
+    "homepage": "https://github.com/novaday-co/laravel-pushe",
     "authors": [
         {
             "name": "Farid",
@@ -21,11 +21,11 @@
     },
     "autoload": {
         "psr-4": {
-            "FarazinCo\\LaravelPushe\\": "src"
+            "NovadayCo\\LaravelPushe\\": "src"
         }
     },
     "autoload-dev": {
-        "FarazinCo\\LaravelPushe\\": "src",
+        "NovadayCo\\LaravelPushe\\": "src",
         "classmap": [
             "tests"
         ]
@@ -37,7 +37,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "FarazinCo\\LaravelPushe\\PusheServiceProvider"
+                "NovadayCo\\LaravelPushe\\PusheServiceProvider"
             ]
         }
     }

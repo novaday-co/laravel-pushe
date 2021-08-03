@@ -1,6 +1,6 @@
 <?php
 
-namespace FarazinCo\LaravelPushe;
+namespace NovadayCo\LaravelPushe;
 
 use BadMethodCallException;
 use GuzzleHttp\Client;
